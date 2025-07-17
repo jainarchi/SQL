@@ -1,0 +1,12 @@
+-- use startersql ;
+
+SELECT * FROM users ;
+-- SELECT COUNT(*) FROM users ;
+
+SELECT  name , id  from users ;       -- print in this order 
+SELECT * FROM users WHERE gender = 'Male' ;
+SELECT * FROM users WHERE gender <> 'female' ;   -- <>  !=    same 
+
+SELECT * FROM users WHERE date_of_birth < '1995-01-01';
+SELECT * FROM users WHERE id >= 15 AND id < 20;
+
