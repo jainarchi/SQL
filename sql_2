@@ -3,10 +3,17 @@
 SELECT * FROM users ;
 -- SELECT COUNT(*) FROM users ;
 
-SELECT  name , id  from users ;       -- print in this order 
+SELECT  name , id  from users ;           -- print in this order 
 SELECT * FROM users WHERE gender = 'Male' ;
 SELECT * FROM users WHERE gender <> 'female' ;   -- <>  !=    same 
 
 SELECT * FROM users WHERE date_of_birth < '1995-01-01';
 SELECT * FROM users WHERE id >= 15 AND id < 20;
 
+
+SELECT * FROM users WHERE date_of_birth IS NOT NULL;
+
+SELECT * FROM users WHERE date_of_birth BETWEEN '1993-12-30' AND '2000-12-31';   -- in sql BETWEEN is inclusive 
+
+
+SELECT * FROM users WHERE gender IN ('Male', 'Other');
