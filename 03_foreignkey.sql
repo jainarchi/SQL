@@ -33,3 +33,14 @@ VALUES
 (18, '11 North Usman Road', 'Chennai', 'Tamil Nadu', '600017'),
 (19, '33 Residency Road', 'Bengaluru', 'Karnataka', '560025'),
 (20, '22 Hazratganj', 'Lucknow', 'Uttar Pradesh', '226001');
+
+
+
+SELECT * FROM users ;
+SELECT * FROM addresses ;
+
+SET autocommit = 0 ;                           -- BEST PRACTICE delete after auto commit off 
+DELETE FROM users where id = 22 ;
+DELETE FROM users WHERE id = 1 ;
+--  rollback ;
+COMMIT ;
