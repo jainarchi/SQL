@@ -44,3 +44,18 @@ DELETE FROM users where id = 22 ;
 DELETE FROM users WHERE id = 1 ;
 --  rollback ;
 COMMIT ;
+
+
+ ALTER TABLE addresses
+ DROP FOREIGN KEY fk_users ;
+ 
+ ALTER TABLE addresses 
+ ADD CONSTRAINT fk_users FOREIGN KEY (user_id ) REFERENCES users (id) ON DELETE CASCADE  ;
+ 
+ DELETE FROM users WHERE id = 5 ;
+
+--   ON DELETE     CASCADE 		SET NULL	  RESTRICT (def)
+
+
+
+
